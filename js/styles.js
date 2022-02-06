@@ -45,8 +45,8 @@ section::after {
 }
 section::before {
   content: attr(id);
-  font-family: 'Comforter', cursive;
-  font-size: 90px;
+ 
+  font-size: 70px;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, .2);
 }
 ${list}
@@ -60,5 +60,10 @@ let url = URL.createObjectURL(blob);
 let link = document.createElement('link');
 link.href = url;
 link.rel = 'stylesheet';
+link.onload = () => {
+  window.requestAnimationFrame(() => {
+    document.body.removeAttribute('hidden');
+  });
+};
 document.head.appendChild(link);
 export {}
