@@ -32,6 +32,10 @@ nav {
 nav:hover {
   transform: none;
 }
+nav:focus {
+  transform: none;
+  outline: none;
+}
 nav:focus-within {
   transform: none;
 }

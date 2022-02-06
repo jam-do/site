@@ -1,5 +1,5 @@
 export const NAV = /*html*/ `
-<nav>
+<nav tabindex="0">
   <div class="nav-burger">🍔</div>
   <div class="nav-block">
     <a href="#Jam-Do">Dojo</a>

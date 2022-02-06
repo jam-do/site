@@ -35,8 +35,8 @@ section::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 40px;
-  left: 40px;
+  top: 20px;
+  left: 20px;
   height: 40px;
   width: 40px;
   border-radius: 100%;

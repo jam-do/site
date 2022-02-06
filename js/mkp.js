@@ -28,6 +28,7 @@ let html = /*html*/ `
 
 ${NAV}
 `;
+
 document.body.innerHTML = html;
 window.requestAnimationFrame(() => {
   window.location.hash = window.location.hash;
