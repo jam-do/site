@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@re4ma/re4ma": "^0.1.6",
+    "@symbiotejs/symbiote": "^1.4.2"
+  }
+}
