@@ -4,6 +4,7 @@ export const NAV = /*html*/ `
   <div class="nav-block">
     <a href="#Jam-Do">Dojo</a>
     <a href="#Technologies">Technologies</a>
+    <a href="#Articles">Articles</a>
     <a href="#Registry">Registry</a>
     <a href="#Partners">Partners</a>
     <a href="#Community">Community</a>

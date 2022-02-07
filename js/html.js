@@ -16,6 +16,10 @@ ${section({
   content: /*html*/ ``,
 })}
 ${section({
+  id: 'Articles',
+  content: /*html*/ ``,
+})}
+${section({
   id: 'Partners',
   content: /*html*/ ``,
 })}
