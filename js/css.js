@@ -18,7 +18,7 @@ for (let i = 1; i < 10; i++) {
 }
 
 /// CSS
-let css = /*css*/ `
+export const CSS = /*css*/ `
 section {
   display: flex;
   position: relative;
@@ -51,19 +51,4 @@ section::before {
 }
 ${list}
 `;
-///
 
-let blob = new Blob([css], {
-  type: 'text/css',
-});
-let url = URL.createObjectURL(blob);
-let link = document.createElement('link');
-link.href = url;
-link.rel = 'stylesheet';
-link.onload = () => {
-  window.requestAnimationFrame(() => {
-    document.body.removeAttribute('hidden');
-  });
-};
-document.head.appendChild(link);
-export {}
