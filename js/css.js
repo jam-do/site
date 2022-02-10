@@ -1,20 +1,14 @@
-let rndClr = () => {
-  let bg = Math.round(Math.random() * 360);
-  let fg = bg + 180;
-  return {
-    bg: `hsl(${bg}, 30%, 50%)`,
-    fg: `hsl(${fg}, 30%, 90%)`,
-  };
-}
-
-let list = '';
-for (let i = 1; i < 10; i++) {
-  list += /*css*/ `
+let nthList = '';
+let clrDeg = Math.round(Math.random() * 360);
+let sectionsTotal = 6;
+for (let i = 1; i <= sectionsTotal; i++) {
+  nthList += /*css*/ `
     section:nth-child(${i}) {
-      background-color: ${rndClr().bg};
-      color: ${rndClr().fg};
+      background-color: hsl(${clrDeg}, 30%, 50%);
+      color: hsl(${clrDeg + 180}, 30%, 90%);
     }
   `;
+  clrDeg += 360 / sectionsTotal;
 }
 
 /// CSS
@@ -29,6 +23,7 @@ section {
   padding: 40px;
   box-sizing: border-box;
   counter-increment: num;
+  outline: none;
 }
 section::after {
   position: absolute;
@@ -45,10 +40,9 @@ section::after {
 }
 section::before {
   content: attr(id);
- 
   font-size: 70px;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, .2);
 }
-${list}
+${nthList}
 `;
 

@@ -64,9 +64,14 @@ nav > .nav-block > a {
   display: block;
   color: currentColor;
   text-decoration: none;
-  padding: 6px;
+  padding: 8px;
   padding-left: 1em;
   padding-right: 1em;
+  outline: none;
+  transition: .2s;
+}
+nav > .nav-block > a:hover, nav > .nav-block > a:focus {
+  background-color: rgba(255, 255, 255, .15);
 }
 h2 {
   font-family: 'Comforter', cursive;
@@ -74,4 +79,11 @@ h2 {
 .txt-block {
   margin-top: 40px;
   max-width: 480px;
+  padding: 30px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, .2);
+}
+.txt-block > * {
+  margin-bottom: 20px;
 }
