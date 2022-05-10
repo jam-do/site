@@ -1,0 +1,32 @@
+<svg 
+  height="500"
+  width="500"
+  viewBox="0 0 500 500"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- <circle cx="250" cy="250" r="250" fill="rgba(255, 0, 0, .1)" /> -->
+  <script type="text/javascript">//<![CDATA[
+    const svg = document.querySelector('svg');
+    function render() {
+      let svgInnerTxt = '';
+      let ch = () => {
+        return Math.round(Math.random() * 255);
+      };
+      for (let i = 1; i < 10; i++) {
+        svgInnerTxt += /*svg*/ `<circle 
+        cx="250" 
+        cy="250" 
+        r="${Math.round(250 - 25*i)}" 
+        fill="rgba(${ch()}, ${ch()}, ${ch()}, ${Math.random() * 0.6})" />`;
+      }
+      svg.innerHTML = svgInnerTxt;
+    }
+    render();
+    svg.onclick = () => {
+      render();
+    };
+    setInterval(() => {
+      render();
+    }, Math.round(Math.random() * 2000));
+  //]]></script>
+</svg>
