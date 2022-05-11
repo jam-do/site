@@ -18,7 +18,7 @@ function init() {
     }
   }, {
     root: null,
-    rootMargin: margin,
+    threshold: 0.4,
   });
   sections.forEach((section) => {
     observer.observe(section);
