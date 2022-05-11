@@ -17,7 +17,6 @@ function init() {
       });
     }
   }, {
-    root: null,
     threshold: 0.4,
   });
   sections.forEach((section) => {
