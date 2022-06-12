@@ -1,8 +1,6 @@
 function init() {
   let menuLinks = [...document.querySelectorAll('nav a')];
   let sections = [...document.querySelectorAll('section')];
-  let margin = `-${Math.round(window.innerHeight / 3)}px`;
-  console.log(margin);
   let observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
       entries[0].target.setAttribute('active', '');
@@ -22,6 +20,7 @@ function init() {
   sections.forEach((section) => {
     observer.observe(section);
   });
+  
 }
 window.onload = () => {
   init();
